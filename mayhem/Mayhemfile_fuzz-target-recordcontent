@@ -1,0 +1,9 @@
+project: savantenvs/pdns
+target: fuzz-target-recordcontent
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-recordcontent/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-target-recordcontent
+    libfuzzer: true
+    timeout: 10

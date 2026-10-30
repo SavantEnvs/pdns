@@ -1,0 +1,9 @@
+project: savantenvs/pdns
+target: fuzz-target-dnslabeltext-parserfc1035charstring
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-dnslabeltext-parserfc1035charstring/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-target-dnslabeltext-parserfc1035charstring
+    libfuzzer: true
+    timeout: 10

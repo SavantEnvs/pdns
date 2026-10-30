@@ -1,0 +1,9 @@
+project: savantenvs/pdns
+target: fuzz-target-dnsdist-dnsparser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-dnsdist-dnsparser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-target-dnsdist-dnsparser
+    libfuzzer: true
+    timeout: 10

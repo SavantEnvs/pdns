@@ -1,0 +1,9 @@
+project: savantenvs/pdns
+target: fuzz-target-dnspacketroundtrip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-dnspacketroundtrip/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-target-dnspacketroundtrip
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/pdns
+target: fuzz-target-packetcache
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-packetcache/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-target-packetcache
+    libfuzzer: true
+    timeout: 10

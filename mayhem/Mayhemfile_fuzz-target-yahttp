@@ -1,0 +1,9 @@
+project: savantenvs/pdns
+target: fuzz-target-yahttp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-yahttp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-target-yahttp
+    libfuzzer: true
+    timeout: 10

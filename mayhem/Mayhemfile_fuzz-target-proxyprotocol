@@ -1,0 +1,9 @@
+project: savantenvs/pdns
+target: fuzz-target-proxyprotocol
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-proxyprotocol/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-target-proxyprotocol
+    libfuzzer: true
+    timeout: 10
